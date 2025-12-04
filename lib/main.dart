@@ -38,7 +38,6 @@ class _MainScreenState extends State<MainScreen> {
   final List<PinConfig> _list = [];
 
   late ya.ClusterizedPlacemarkCollection _clusterizedCollection;
-  // late ya.MapObjectCollection _pinCollection;
 
   late ya.ClusterListener _clusterListener;
 
@@ -65,7 +64,6 @@ class _MainScreenState extends State<MainScreen> {
             _painter = PinPainterService();
             _clusterListener = ClusterListenerImpl(_painter);
 
-            // _pinCollection = window.map.mapObjects.addCollection();
             _clusterizedCollection = window.map.mapObjects
                 .addClusterizedPlacemarkCollection(_clusterListener);
           },
